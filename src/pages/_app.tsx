@@ -1,14 +1,10 @@
 import React from 'react'
-import { Amplify } from 'aws-amplify'
 import { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
 import Script from 'next/script'
 
 import { GlobalStyle } from '@globals/index'
 import theme from '@globals/theme'
-
-import config from '@services/amplify'
-Amplify.configure({ ...config, ssr: true })
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -38,4 +34,3 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
 }
 
 export default App
-
