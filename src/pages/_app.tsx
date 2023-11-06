@@ -5,6 +5,7 @@ import Script from 'next/script'
 
 import { GlobalStyle } from '@globals/index'
 import theme from '@globals/theme'
+import { ErrorModalProvider } from '@contexts/useErrorModalContext'
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -26,8 +27,10 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
       </Script>
 
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-        <GlobalStyle />
+        <ErrorModalProvider>
+          <Component {...pageProps} />
+          <GlobalStyle />
+        </ErrorModalProvider>
       </ThemeProvider>
     </>
   )
