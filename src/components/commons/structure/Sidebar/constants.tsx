@@ -9,7 +9,7 @@ export const MENU_SECTIONS = [
       {
         icon: CustomersSVG,
         title: 'Clientes',
-        key: '/customers',
+        key: '/',
         default: true
       },
       {

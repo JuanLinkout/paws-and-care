@@ -42,7 +42,7 @@ export const Sidebar: React.FC = () => {
                   selected={
                     router.asPath === '/'
                       ? pageItem.default
-                      : router.asPath.includes(pageItem.key)
+                      : router.asPath === pageItem.key
                   }
                   key={pageItem.key}
                   Icon={pageItem.icon}
