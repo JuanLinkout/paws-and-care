@@ -15,31 +15,57 @@ enum Border {
   b2 = '5px'
 }
 
-enum BorderRadius {
-  b0 = '0px',
-  b1 = '5px',
-  b2 = '10px'
-}
-
 export default {
   colors: {
-    white: '#ffffff'
+    textPrimary: '#000000',
+    textSecondary: '#6F6F6F',
+    textPlaceholder: '#9D9BA8',
+    black: '#000000',
+    white: '#ffffff',
+    whiteHover: '#F7F7F7',
+    primary: '#4178F6',
+    primaryDark: '#3062D3',
+    border: '#eaeaea',
+    divider: '#EBEBEB',
+    darkBorder: '#B4B4B4',
+    surface: '#FAFAFA',
+    darkSurface: '#F4F4F4',
+    warning: '#FF8A00',
+    error: '#fe0000',
+    errorLowOpacity: '#fe00001a',
+    input: {
+      background: '#F5F5F5'
+    },
+    shadows: {
+      shadowSmallest: '0px 2px 4px rgba(0,0,0,.1)',
+      shadowExtraSmall: '0px 4px 8px rgba(0,0,0,.12)',
+      shadowSmall: '0 5px 10px rgba(0,0,0,.12)',
+      shadowMedium: '0 8px 30px rgba(0,0,0,.12)',
+      shadowLarge: '0 30px 60px rgba(0,0,0,.12)',
+      shadowHover: '0 30px 60px rgba(0,0,0,.12)'
+    },
+    status: {
+      greenSurface: '#FBFFF9',
+      greenBorder: '#04AA15',
+      blueBorder: '#0587FF',
+      blueSurface: '#F5F8FF'
+    }
   },
   padding: {
-    p1: Padding.p1,
-    p2: Padding.p2,
-    p3: Padding.p3,
-    p4: Padding.p4,
-    p5: Padding.p5,
-    p6: Padding.p6,
-    p7: Padding.p7,
-    p8: Padding.p8,
+    p1: '2px',
+    p2: '4px',
+    p3: '8px',
+    p4: '12px',
+    p5: '16px',
+    p6: '22px',
+    p7: '28px',
+    p8: '32px',
     page: '20px'
   },
   border: {
-    b0: Border.b0,
-    b1: Border.b1,
-    b2: Border.b2
+    b0: '0px',
+    b1: '1px',
+    b2: '3px',
+    b3: '5px'
   }
 }
-
