@@ -18,7 +18,7 @@ const buttonVariants: Record<ButtonVariants, any> = {
     transition: all 0.15s ease-in-out;
     color: ${({ theme }) => theme.colors.white};
 
-    :hover {
+    &:hover {
       background-color: ${({ theme }) => theme.colors.primaryDark};
     }
 
@@ -43,7 +43,7 @@ const buttonVariants: Record<ButtonVariants, any> = {
       stroke: ${({ theme }) => theme.colors.textPrimary};
     }
 
-    :hover {
+    &:hover {
       background-color: ${({ theme }) => theme.colors.darkSurface};
     }
 
@@ -68,7 +68,7 @@ const buttonVariants: Record<ButtonVariants, any> = {
       stroke: ${({ theme }) => theme.colors.primary};
     }
 
-    :hover {
+    &:hover {
       opacity: 0.7;
     }
 

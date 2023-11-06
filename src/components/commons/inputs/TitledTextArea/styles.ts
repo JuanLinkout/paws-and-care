@@ -65,7 +65,7 @@ export const Input = styled.textarea`
 const errorStyle = css`
   border: 1px solid red;
 
-  :hover {
+  &:hover {
     border: 1px solid red;
   }
 

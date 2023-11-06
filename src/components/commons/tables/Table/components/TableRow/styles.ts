@@ -9,7 +9,7 @@ interface Props {
 export const Container = styled.tr`
   border-bottom: 1px solid ${theme.colors.border};
 
-  :hover {
+  &:hover {
     background-color: ${({ theme }) => theme.colors.darkSurface};
     cursor: ${({ onClick }) => (onClick ? 'pointer' : 'default')};
   }

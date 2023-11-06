@@ -12,7 +12,7 @@ export const Container = styled.div`
   border: none;
 
   transition: all 0.15s ease-in-out;
-  :hover {
+  &:hover {
     background-color: ${({ theme }) => theme.colors.darkSurface};
   }
 

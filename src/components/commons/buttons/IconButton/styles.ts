@@ -36,7 +36,7 @@ export const Container = styled.button<ContainerProps>`
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
 
   transition: all 0.15s ease-in-out;
-  :hover {
+  &:hover {
     background-color: ${({ theme }) => theme.colors.darkSurface};
   }
 `

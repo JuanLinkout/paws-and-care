@@ -15,7 +15,7 @@ export const Container = styled.div<Props>`
     selected ? theme.colors.darkSurface : theme.colors.white};
 
   transition: all 0.15s ease-in-out;
-  :hover {
+  &:hover {
     background-color: ${({ theme }) => theme.colors.darkSurface};
   }
 

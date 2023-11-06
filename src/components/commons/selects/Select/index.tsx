@@ -86,7 +86,7 @@ export const Select: React.FC<Props> = ({
               : props.isFocused
               ? theme.colors.border
               : theme.colors.white,
-            ':hover': {
+            '&:hover': {
               backgroundColor: props.isSelected
                 ? theme.colors.primary
                 : theme.colors.border

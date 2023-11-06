@@ -11,12 +11,12 @@ export const MENU_SECTIONS = [
         title: 'Clientes',
         key: '/customers',
         default: true
+      },
+      {
+        icon: PetsSVG,
+        title: 'Animais',
+        key: '/pets'
       }
-      // {
-      //   icon: PetsSVG,
-      //   title: 'Animais',
-      //   key: '/pets'
-      // }
     ]
   }
 ]
