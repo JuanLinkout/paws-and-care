@@ -6,7 +6,5 @@ import { makeError } from '@utils/functions/makeError'
 export async function postCustomer(
   payload?: HttpPostCustomerPayload
 ): Promise<void> {
-  const { saveItem } = useLocalStorage()
-
-  throw makeError('123', 'outro error', '123')
+  return null
 }
