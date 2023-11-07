@@ -1,8 +1,20 @@
+import { useLocalStorage } from '@hooks/useLocalStorage'
 import { HttpGetUsersParams, HttpGetUsersResponse } from './types'
 
 // TODO: Implementar lógica
 export async function getCustomers(
   params?: HttpGetUsersParams
 ): Promise<HttpGetUsersResponse> {
-  return null
+
+  let customers = useLocalStorage().getItem("customers")
+
+  console.log(params)
+
+  if (params.q) {
+    customers = customers.filter(customer =>
+      customer.name.toLowerCase().includes(params.q.toLowerCase())
+    )
+  }
+
+  return customers
 }
