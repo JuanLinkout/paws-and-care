@@ -2,10 +2,9 @@ import { useErrorModalContext } from '@contexts/useErrorModalContext'
 import { useEffect, useRef, useState } from 'react'
 import { PetDetailsModalMethods } from '../../modals/PetDetailsModal/types'
 import { ActionModalMethods } from '@components/modals/ActionModal/types'
-import { deleteCustomer } from '@services/api/routes/customers/deleteCustomer'
 import { IPet } from '@services/types/Pet'
 import { useGetPets } from '@services/api/routes/pets/getPets/hook'
-import { errorHandler } from '@utils/handlers/errors'
+import { deletePet } from '@services/api/routes/pets/deletePet'
 
 export function usePets() {
   // States
@@ -34,13 +33,13 @@ export function usePets() {
     deleteRef.current.open()
   }
 
-  async function handleDeleteCustomer() {
+  async function handleDeletePets() {
     try {
-      await deleteCustomer(idToDelete.current)
+      await deletePet(idToDelete.current)
       await mutate()
       deleteRef.current.close()
     } catch (e) {
-      console.log('[handleDeleteCustomer]:', e)
+      console.log('[handleDeletePets]:', e)
       openErrorModal({ error: e })
     }
   }
@@ -61,7 +60,7 @@ export function usePets() {
     handleOpenDetails,
     handleCreateClick,
     reloadList: mutate,
-    handleDeleteCustomer,
+    handleDeletePets,
     handleDeleteClick,
     idToDelete: idToDelete.current
   }

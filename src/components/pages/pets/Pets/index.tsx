@@ -29,7 +29,7 @@ export const Pets: React.FC = () => {
     handleOpenDetails,
     reloadList,
     handleDeleteClick,
-    handleDeleteCustomer
+    handleDeletePets
   } = usePets()
 
   return (
@@ -67,7 +67,7 @@ export const Pets: React.FC = () => {
           ref={deleteRef}
           isAsync
           onCancelPress={() => deleteRef.current.close()}
-          onConfirmPress={handleDeleteCustomer}
+          onConfirmPress={handleDeletePets}
         />
       </Container>
     </CommonLayout>
