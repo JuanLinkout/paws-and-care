@@ -38,7 +38,7 @@ export function mapFormToPet(form: IForm): IPet {
     id: form.id,
     name: form.name,
     type: form.type,
-    customerId: form.customer[0].value.toString(),
-    customerName: form.customer[0].label.toString()
+    customerId: form?.customer[0]?.value?.toString(),
+    customerName: form?.customer[0]?.label?.toString()
   }
 }
