@@ -1,11 +1,12 @@
-import { HttpError, ErrorHandlerResponse } from './types'
+import { ErrorHandlerResponse } from './types'
 
-export const handleFormatedError = (error: HttpError): ErrorHandlerResponse => {
+export const handleFormatedError = (
+  error: ErrorHandlerResponse
+): ErrorHandlerResponse => {
   const message =
-    error?.response?.data?.message ||
-    'Por favor entre em contato com o nosso suporte.'
-  const title = 'Algo deu errado'
-  const code = error?.response?.data?.errorCode || undefined
+    error?.message || 'Por favor entre em contato com o nosso suporte.'
+  const title = error?.title || 'Algo deu errado'
+  const code = error?.code || undefined
 
   return {
     title,

@@ -37,11 +37,6 @@ export const ErrorModal = React.forwardRef<IErrorModalMethods, unknown>(
     }
 
     function handleOpen(value: OpenErrorModal) {
-      if (value.customError) {
-        setErrorInfo(value.customError)
-        return setVisible(true)
-      }
-
       const error = errorHandler(value.error)
       setErrorInfo(error)
       setVisible(true)

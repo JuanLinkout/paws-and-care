@@ -50,8 +50,7 @@ export function useUsers() {
   // Effects
   useEffect(() => {
     if (error) {
-      const formatedError = errorHandler(error)
-      openErrorModal({ error: formatedError })
+      openErrorModal({ error })
     }
   }, [error])
 

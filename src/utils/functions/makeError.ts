@@ -5,11 +5,9 @@ export function makeError(
 ): Error {
   return new Error(
     JSON.stringify({
-      customError: {
-        title,
-        message,
-        code
-      }
+      title,
+      message,
+      code
     })
   )
 }

@@ -48,8 +48,7 @@ export function usePets() {
   // Effects
   useEffect(() => {
     if (error) {
-      const formatedError = errorHandler(error)
-      openErrorModal({ error: formatedError })
+      openErrorModal({ error })
     }
   }, [error])
 
