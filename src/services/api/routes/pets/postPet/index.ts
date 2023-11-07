@@ -6,7 +6,6 @@ import { makeError } from '@utils/functions/makeError'
 export async function postPet(payload?: HttpPostPetPayload): Promise<void> {
   const requiredFields = ['name', 'type', 'breed', 'customerId', 'customerName']
 
-  const { name, type, breed, customerId, customerName } = payload
   requiredFields.forEach(param => {
     if (!payload[param])
       throw makeError(
@@ -15,6 +14,8 @@ export async function postPet(payload?: HttpPostPetPayload): Promise<void> {
         '400'
       )
   })
+
+  const { name, type, breed, customerId, customerName } = payload
 
   const pet: IPet = {
     id: crypto.randomUUID(),
