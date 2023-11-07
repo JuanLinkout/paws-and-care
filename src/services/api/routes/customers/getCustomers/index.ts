@@ -8,9 +8,7 @@ export async function getCustomers(
 
   let customers = useLocalStorage().getItem("customers")
 
-  console.log(params)
-
-  if (params.q) {
+  if (params?.q) {
     customers = customers.filter(customer =>
       customer.name.toLowerCase().includes(params.q.toLowerCase())
     )
