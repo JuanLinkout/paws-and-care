@@ -11,7 +11,7 @@ export async function postPet(payload?: HttpPostPetPayload): Promise<void> {
     if (!payload[param])
       throw makeError(
         'Missing Param',
-        `O parametro "${param}" está faltando`,
+        `O parametro "${mapParams(param)}" está faltando`,
         '400'
       )
   })
@@ -32,4 +32,16 @@ export async function postPet(payload?: HttpPostPetPayload): Promise<void> {
   pets.push(pet)
 
   saveItem('pets', pets)
+}
+
+const mapParams = (param: string): string => {
+  const mapParams = {
+    name: 'Nome',
+    type: 'Tipo',
+    breed: 'Raça'
+  }
+
+  if (param === 'customerId' || param === 'customerName') return 'Dono'
+
+  return mapParams[param] || param
 }
