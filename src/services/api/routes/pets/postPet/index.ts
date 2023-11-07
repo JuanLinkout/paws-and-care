@@ -11,7 +11,7 @@ export async function postPet(payload?: HttpPostPetPayload): Promise<void> {
     if (!payload[param])
       throw makeError(
         'Missing Param',
-        `O parametro ${param} está faltando`,
+        `O parametro "${param}" está faltando`,
         '400'
       )
   })
