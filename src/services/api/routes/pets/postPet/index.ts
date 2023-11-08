@@ -28,7 +28,9 @@ export async function postPet(payload?: HttpPostPetPayload): Promise<void> {
 
   const { getItem, saveItem } = useLocalStorage()
 
-  const pets = getItem('pets')
+  let pets = getItem('pets')
+
+  if (!pets) pets = []
 
   pets.push(pet)
 
