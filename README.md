@@ -10,6 +10,8 @@ Desenvolvido utilizando NEXT.JS e boas práticas de organização front-end para
 
 ## Como rodar
 
+Ressaltando que para instalar as dependencias é preciso uma versão >=18.17.0 do node instalado na maquina.
+
 Para rodar basta realizar a instalação das dependencias do projeto rodando ```npm i``` ou ```yarn```.
 Depois de ter instalado as dependencias basta rodar ```yarn dev``` ou ```npm dev``` para rodar o projeto na porta 3000.
 
